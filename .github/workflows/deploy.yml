@@ -17,11 +17,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+          cache: 'maven'
 
-      - name: Build with Maven
-        uses: stCarolas/setup-maven@v4.4
-        with:
-          maven-version: 3.8.2
+      # - name: Build with Maven
+      #   uses: stCarolas/setup-maven@v4.4
+      #   with:
+      #     maven-version: 3.8.2
 
       - name: Unit Tests
         run: mvn clean package
