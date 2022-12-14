@@ -39,9 +39,6 @@ jobs:
         with:
           name: demo
 
-      - name: Install Docker
-        run: apt-get install -y docker-ce
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
