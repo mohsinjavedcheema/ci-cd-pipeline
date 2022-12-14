@@ -15,7 +15,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'adopt'
 
       - name: Setup Maven
@@ -27,13 +27,13 @@ jobs:
         run: mvn clean package
 
       - name: Rename the artifact
-        run: cp target/backend-social-network-1.0-SNAPSHOT.jar backend-social-network-${{ github.sha }}.jar
+        run: cp target/demo-0.0.1-SNAPSHOT.jar demo-${{ github.sha }}.jar
 
       - name: Save the artifact
         uses: actions/upload-artifact@master
         with:
-          name: backend-social-network
-          path: backend-social-network-${{ github.sha }}.jar
+          name: demo
+          path: demo-${{ github.sha }}.jar
 
   fake-deploy:
     runs-on: self-hosted
@@ -42,8 +42,8 @@ jobs:
       - name: Get the artifact
         uses: actions/download-artifact@master
         with:
-          name: backend-social-network
+          name: demo
 
       - name: Fake deploy
-        run: ls backend-social-network-*.jar
+        run: ls demo-*.jar
 
