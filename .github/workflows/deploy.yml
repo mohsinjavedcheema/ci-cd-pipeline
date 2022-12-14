@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: demo
-          path: demo.jar
+          path: demo-0.0.1-SNAPSHOT.jar
 
   upload-to-ecr:
     runs-on: self-hosted
