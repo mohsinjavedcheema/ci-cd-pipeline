@@ -47,7 +47,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Install Docker
-        run: apt-get install -y docker docker-engine
+        run: apt-get install -y docker
 
       - name: Login to Amazon ECR
         id: login-ecr
