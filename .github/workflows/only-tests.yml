@@ -18,10 +18,8 @@ jobs:
           java-version: 11
           distribution: 'adopt'
 
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v4.4
-        with:
-          maven-version: 3.8.2
+      - name: Install Maven
+        run: apt-get install -y maven
 
       - name: All the Tests and Coverage check
         run: mvn clean install
