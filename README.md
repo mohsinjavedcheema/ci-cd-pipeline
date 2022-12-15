@@ -4,5 +4,6 @@
 ## Features
 
 - Java 17 is used to create a sample application
-- Test, Build and Upload to AWS ECR using no unofficial actions
+- Run on every push to main or master branch
+- Test, Build and Upload to AWS ECR using no unofficial actions and adds a GIT tag in ECR repo
 - Whole flow tested and working on a Debian runner with maven and docker installed
