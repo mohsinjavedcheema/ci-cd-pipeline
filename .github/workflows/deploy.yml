@@ -51,7 +51,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Start Docker Service
-        run: systemctl start docker.service
+        run: service docker start
 
       - name: Build, tag, and push image to Amazon ECR
         env:
