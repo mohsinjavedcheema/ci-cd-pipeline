@@ -47,7 +47,7 @@ jobs:
           aws-region: us-east-1
       
       - name: Start Docker
-        run: groupadd docker && usermod -aG docker $(whoami) && service docker start
+        run: usermod -aG docker $(whoami) && service docker start
 
       - name: Login to Amazon ECR
         id: login-ecr
