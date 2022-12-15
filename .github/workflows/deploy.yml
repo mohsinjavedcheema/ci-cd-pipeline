@@ -46,8 +46,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       
-      - name: Start Docker
-        run: usermod -aG docker $(whoami) && service docker start
+      # - name: Start Docker
+      #   run: usermod -aG docker $(whoami) && service docker start
 
       - name: Login to Amazon ECR
         id: login-ecr
